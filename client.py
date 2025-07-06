@@ -28,10 +28,13 @@ async def main():
     )
 
 
-    user_question = input("Enter a math question: ")
-    math_response = await agent.ainvoke(
-        {"messages": [{"role": "user", "content": user_question}]},
-    )
-    print("Math response:", math_response['messages'][-1].content)
+    while True:
+        user_question = input("Enter a ReqRes question (or 'q' to quit): ")
+        if user_question.lower() == 'q':
+            break
+        reqres_response = await agent.ainvoke(
+            {"messages": [{"role": "user", "content": user_question}]},
+        )
+        print("ReqRes response:", reqres_response['messages'][-1].content)
 
 asyncio.run(main())
