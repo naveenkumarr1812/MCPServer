@@ -10,7 +10,7 @@ This guide will help you set up and run the Learn_MCP project, which demonstrate
 ## 1. Clone the Repository
 ```
 git clone <your-repo-url>
-cd Learn_MCP
+cd mathServer-FastMCP
 ```
 
 ## 2. Create and Activate a Virtual Environment (optional but recommended)
